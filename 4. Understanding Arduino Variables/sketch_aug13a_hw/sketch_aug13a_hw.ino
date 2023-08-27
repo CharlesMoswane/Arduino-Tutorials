@@ -20,16 +20,9 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  // digitalWrite(redLED, HIGH);
-  // delay(redDelayTime);
-  // digitalWrite(redLED, LOW);
-  // delay(redDelayTime);
   blinkLEDNTimes(redLED,redDelayTime,1);
 
-  digitalWrite(greenLED, HIGH);
-  delay(greenDelayTime);
-  digitalWrite(greenLED, LOW);
-  delay(greenDelayTime);
+  blinkLEDNTimes(greenLED,greenDelayTime,1);
 
   digitalWrite(yellowLED, HIGH);
   delay(yellowDelayTime);
