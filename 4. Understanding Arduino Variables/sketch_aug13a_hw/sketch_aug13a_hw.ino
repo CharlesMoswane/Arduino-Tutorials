@@ -27,8 +27,10 @@ void loop() {
 }
 
 void blinkLEDNTimes(int LED, int delayT, int count){
-  digitalWrite(LED, HIGH);
-  delay(delayT);
-  digitalWrite(LED, LOW);
-  delay(delayT);
+  for(int i = 0; i < count; i++){
+    digitalWrite(LED, HIGH);
+    delay(delayT);
+    digitalWrite(LED, LOW);
+    delay(delayT);
+  }
 }
