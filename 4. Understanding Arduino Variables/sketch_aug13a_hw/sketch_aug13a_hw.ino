@@ -21,18 +21,9 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   blinkLEDNTimes(redLED,redDelayTime,1);
-
   blinkLEDNTimes(greenLED,greenDelayTime,1);
-
-  digitalWrite(yellowLED, HIGH);
-  delay(yellowDelayTime);
-  digitalWrite(yellowLED, LOW);
-  delay(yellowDelayTime);
-
-  digitalWrite(blueLED, HIGH);
-  delay(blueDelayTime);
-  digitalWrite(blueLED, LOW);
-  delay(blueDelayTime);
+  blinkLEDNTimes(yellowLED,yellowDelayTime,1);
+  blinkLEDNTimes(blueLED,blueDelayTime,1);
 }
 
 void blinkLEDNTimes(int LED, int delayT, int count){
