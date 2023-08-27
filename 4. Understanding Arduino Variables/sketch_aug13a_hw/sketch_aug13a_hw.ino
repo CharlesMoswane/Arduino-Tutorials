@@ -20,10 +20,10 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  blinkLEDNTimes(redLED,redDelayTime,1);
-  blinkLEDNTimes(greenLED,greenDelayTime,1);
+  blinkLEDNTimes(redLED,redDelayTime,2);
+  blinkLEDNTimes(greenLED,greenDelayTime,3);
   blinkLEDNTimes(yellowLED,yellowDelayTime,1);
-  blinkLEDNTimes(blueLED,blueDelayTime,1);
+  blinkLEDNTimes(blueLED,blueDelayTime,4);
 }
 
 void blinkLEDNTimes(int LED, int delayT, int count){
