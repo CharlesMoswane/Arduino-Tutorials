@@ -20,10 +20,11 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  digitalWrite(redLED, HIGH);
-  delay(redDelayTime);
-  digitalWrite(redLED, LOW);
-  delay(redDelayTime);
+  // digitalWrite(redLED, HIGH);
+  // delay(redDelayTime);
+  // digitalWrite(redLED, LOW);
+  // delay(redDelayTime);
+  blinkLEDNTimes(redLED,redDelayTime,1);
 
   digitalWrite(greenLED, HIGH);
   delay(greenDelayTime);
@@ -41,9 +42,9 @@ void loop() {
   delay(blueDelayTime);
 }
 
-void blinkLEDNTimes(int LED, int delay, int count){
+void blinkLEDNTimes(int LED, int delayT, int count){
   digitalWrite(LED, HIGH);
-  delay(delay);
+  delay(delayT);
   digitalWrite(LED, LOW);
-  delay(delay);
+  delay(delayT);
 }
