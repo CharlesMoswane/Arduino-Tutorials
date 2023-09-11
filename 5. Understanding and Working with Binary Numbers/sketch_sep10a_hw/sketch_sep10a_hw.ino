@@ -1,37 +1,37 @@
-int redLED = 9;
+int redLED_8 = 9;
 int redDelayTime = 500;
 
-int greenLED = 10;
+int greenLED_4 = 10;
 int greenDelayTime = 500;
 
-int yellowLED = 11;
+int yellowLED_2 = 11;
 int yellowDelayTime = 500;
 
-int blueLED = 12;
+int blueLED_1 = 12;
 int blueDelayTime = 500;
 
 void setup() {
   // put your setup code here, to run once:
-  pinMode(redLED, OUTPUT);
-  pinMode(greenLED, OUTPUT);
-  pinMode(yellowLED, OUTPUT);
-  pinMode(blueLED, OUTPUT);
+  pinMode(redLED_8, OUTPUT);
+  pinMode(greenLED_4, OUTPUT);
+  pinMode(yellowLED_2, OUTPUT);
+  pinMode(blueLED_1, OUTPUT);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
   printToLED(true, false, true, true);
-  blinkLEDNTimes(redLED,redDelayTime,1);
-  blinkLEDNTimes(greenLED,greenDelayTime,2);
-  blinkLEDNTimes(yellowLED,yellowDelayTime,3);
-  blinkLEDNTimes(blueLED,blueDelayTime,4);
+  blinkLEDNTimes(redLED_8,redDelayTime,1);
+  blinkLEDNTimes(greenLED_4,greenDelayTime,2);
+  blinkLEDNTimes(yellowLED_2,yellowDelayTime,3);
+  blinkLEDNTimes(blueLED_1,blueDelayTime,4);
 }
 
 void printToLED(bool redOn, bool greenOn, bool yellowOn, bool blueOn){
-  digitalWrite(redLED, HIGH);
-  digitalWrite(greenLED, HIGH);
-  digitalWrite(yellowLED, HIGH);
-  digitalWrite(blueLED, HIGH);
+  digitalWrite(redLED_8, HIGH);
+  digitalWrite(greenLED_4, HIGH);
+  digitalWrite(yellowLED_2, HIGH);
+  digitalWrite(blueLED_1, HIGH);
 }
 
 void blinkLEDNTimes(int LED, int delayT, int count){
