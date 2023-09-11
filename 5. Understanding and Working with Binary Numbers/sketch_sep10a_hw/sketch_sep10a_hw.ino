@@ -21,10 +21,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   printToLED(true, false, true, true);
-  blinkLEDNTimes(redLED_8,redDelayTime,2);
-  blinkLEDNTimes(greenLED_4,greenDelayTime,2);
-  blinkLEDNTimes(yellowLED_2,yellowDelayTime,3);
-  blinkLEDNTimes(blueLED_1,blueDelayTime,4);
+  delay(greenDelayTime);
   decimalToBinary(13);
 }
 
@@ -48,13 +45,4 @@ void printToLED(bool redOn, bool greenOn, bool yellowOn, bool blueOn){
     digitalWrite(yellowLED_2, HIGH);
   if(blueOn)
     digitalWrite(blueLED_1, HIGH);
-}
-
-void blinkLEDNTimes(int LED, int delayT, int count){
-  for(int i = 0; i < count; i++){
-    digitalWrite(LED, HIGH);
-    delay(delayT);
-    digitalWrite(LED, LOW);
-    delay(delayT);
-  }
 }
