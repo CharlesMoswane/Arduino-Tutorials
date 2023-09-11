@@ -21,13 +21,20 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   printToLED(true, false, true, true);
-  blinkLEDNTimes(redLED_8,redDelayTime,1);
+  blinkLEDNTimes(redLED_8,redDelayTime,2);
   blinkLEDNTimes(greenLED_4,greenDelayTime,2);
   blinkLEDNTimes(yellowLED_2,yellowDelayTime,3);
   blinkLEDNTimes(blueLED_1,blueDelayTime,4);
 }
 
 void printToLED(bool redOn, bool greenOn, bool yellowOn, bool blueOn){
+  // Reset the number
+  digitalWrite(redLED_8, LOW);
+  digitalWrite(greenLED_4, LOW);
+  digitalWrite(yellowLED_2, LOW);
+  digitalWrite(blueLED_1, LOW);
+
+  // Set the new number
   digitalWrite(redLED_8, HIGH);
   digitalWrite(greenLED_4, HIGH);
   digitalWrite(yellowLED_2, HIGH);
