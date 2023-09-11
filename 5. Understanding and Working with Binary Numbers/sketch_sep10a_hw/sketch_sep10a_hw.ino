@@ -40,10 +40,14 @@ void printToLED(bool redOn, bool greenOn, bool yellowOn, bool blueOn){
   digitalWrite(blueLED_1, LOW);
 
   // Set the new number
-  digitalWrite(redLED_8, HIGH);
-  digitalWrite(greenLED_4, HIGH);
-  digitalWrite(yellowLED_2, HIGH);
-  digitalWrite(blueLED_1, HIGH);
+  if(redOn)
+    digitalWrite(redLED_8, HIGH);
+  if(greenOn)
+    digitalWrite(greenLED_4, HIGH);
+  if(yellowOn)
+    digitalWrite(yellowLED_2, HIGH);
+  if(blueOn)
+    digitalWrite(blueLED_1, HIGH);
 }
 
 void blinkLEDNTimes(int LED, int delayT, int count){
