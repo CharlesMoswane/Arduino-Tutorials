@@ -14,10 +14,16 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  printToLED(true, false, true, true);
-  delay(delayTime);
-  decimalToBinary(13);
-  delay(delayTime);
+  countDown(13);
+}
+
+void countDown(int num){
+  if (num > 16)
+    return;
+  for(int i = num; i >= 0; i--){
+    decimalToBinary(i);
+    delay(delayTime);
+  }
 }
 
 void decimalToBinary(int num){
