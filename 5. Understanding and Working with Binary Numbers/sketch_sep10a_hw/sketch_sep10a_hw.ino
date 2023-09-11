@@ -20,17 +20,18 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+  decimalToBinary(true, false, true, true);
   blinkLEDNTimes(redLED,redDelayTime,1);
-  blinkLEDNTimes(greenLED,greenDelayTime,1);
-  blinkLEDNTimes(yellowLED,yellowDelayTime,1);
-  blinkLEDNTimes(blueLED,blueDelayTime,1);
+  blinkLEDNTimes(greenLED,greenDelayTime,2);
+  blinkLEDNTimes(yellowLED,yellowDelayTime,3);
+  blinkLEDNTimes(blueLED,blueDelayTime,4);
 }
 
-void decimalToBinary(boolean redOn, boolean greenOn, boolean yellowOn, boolean blueOn){
+void decimalToBinary(bool redOn, bool greenOn, bool yellowOn, bool blueOn){
   digitalWrite(redLED, HIGH);
   digitalWrite(greenLED, HIGH);
   digitalWrite(yellowLED, HIGH);
-  digitalWrite(yellowLED, HIGH);
+  digitalWrite(blueLED, HIGH);
 }
 
 void blinkLEDNTimes(int LED, int delayT, int count){
