@@ -25,6 +25,11 @@ void loop() {
   blinkLEDNTimes(greenLED_4,greenDelayTime,2);
   blinkLEDNTimes(yellowLED_2,yellowDelayTime,3);
   blinkLEDNTimes(blueLED_1,blueDelayTime,4);
+  decimalToBinary(13);
+}
+
+void decimalToBinary(int num){
+  printToLED(true, true, false, true);
 }
 
 void printToLED(bool redOn, bool greenOn, bool yellowOn, bool blueOn){
