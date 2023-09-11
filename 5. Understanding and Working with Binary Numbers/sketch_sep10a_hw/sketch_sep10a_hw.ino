@@ -2,7 +2,7 @@ int redLED_8 = 9;
 int greenLED_4 = 10;
 int yellowLED_2 = 11;
 int blueLED_1 = 12;
-int delayTime = 500;
+int delayTime = 800;
 
 void setup() {
   // put your setup code here, to run once:
@@ -14,20 +14,41 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  countDown(13);
+  countDown(15);
 }
 
 void countDown(int num){
-  if (num > 16)
+  if (num > 15)
     return;
   for(int i = num; i >= 0; i--){
     decimalToBinary(i);
     delay(delayTime);
+    printToLED(false, false, false, false);  
+    delay(delayTime);
   }
 }
 
-void decimalToBinary(int num){
-  printToLED(true, true, false, true);
+void decimalToBinary(int num){;
+  bool eight = false, four = false, two = false, one = false;
+  int remainder = num;
+  
+  if(remainder > 7){
+    eight = true;
+    remainder = remainder - 8;
+  }
+  if(remainder > 3){
+    four = true;
+    remainder = remainder - 4;
+  }
+  if(remainder > 1){
+    two = true;
+    remainder = remainder - 2;
+  }
+  if(remainder == 1){
+    one = true;
+  }
+
+  printToLED(eight, four, two, one);
 }
 
 void printToLED(bool redOn, bool greenOn, bool yellowOn, bool blueOn){
