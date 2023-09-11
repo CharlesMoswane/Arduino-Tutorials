@@ -1,14 +1,8 @@
 int redLED_8 = 9;
-int redDelayTime = 500;
-
 int greenLED_4 = 10;
-int greenDelayTime = 500;
-
 int yellowLED_2 = 11;
-int yellowDelayTime = 500;
-
 int blueLED_1 = 12;
-int blueDelayTime = 500;
+int delayTime = 500;
 
 void setup() {
   // put your setup code here, to run once:
@@ -21,8 +15,9 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   printToLED(true, false, true, true);
-  delay(greenDelayTime);
+  delay(delayTime);
   decimalToBinary(13);
+  delay(delayTime);
 }
 
 void decimalToBinary(int num){
