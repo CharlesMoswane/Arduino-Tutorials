@@ -34,7 +34,7 @@ void countUp(int num){
     num = 0;
   }
   if(num > 15){
-    num = 15
+    num = 15;
   }
 
   for(int i = num; i < 16; i++){
