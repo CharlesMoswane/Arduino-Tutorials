@@ -14,6 +14,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+  countUp(0);
   countDown(15);
 }
 
@@ -21,6 +22,22 @@ void countDown(int num){
   if (num > 15)
     return;
   for(int i = num; i >= 0; i--){
+    decimalToBinary(i);
+    delay(delayTime);
+    printToLED(false, false, false, false);  
+    delay(delayTime);
+  }
+}
+
+void countUp(int num){
+  if(num < 0){
+    num = 0;
+  }
+  if(num > 15){
+    num = 15
+  }
+
+  for(int i = num; i < 16; i++){
     decimalToBinary(i);
     delay(delayTime);
     printToLED(false, false, false, false);  
