@@ -1,1 +1,12 @@
-build/
+# Ignore everything by default
+*
+
+# But don't ignore directories (so Git can recurse into them)
+!*/
+
+# Track Arduino sketch files
+!**/*.ino
+
+# Track common project files
+!.gitignore
+!README.md
