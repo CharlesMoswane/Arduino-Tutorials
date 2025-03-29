@@ -10,3 +10,4 @@
 # Track common project files
 !.gitignore
 !README.md
+!LICENSE
